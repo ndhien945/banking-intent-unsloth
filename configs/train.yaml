@@ -1,0 +1,22 @@
+model:
+  base_model: "unsloth/llama-3-8b-bnb-4bit"
+  max_seq_length: 256 
+  load_in_4bit: true
+
+lora:
+  r: 16
+  lora_alpha: 16
+  lora_dropout: 0
+  bias: "none"
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+training:
+  batch_size: 2 
+  gradient_accumulation_steps: 4 
+  learning_rate: 0.0002 
+  epochs: 1 
+  optimizer: "adamw_8bit"
+  output_dir: "outputs/banking-intent-lora" 
+
+data:
+  train_path: "sample_data/train.csv"
