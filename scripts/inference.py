@@ -67,7 +67,7 @@ def main():
         print("="*50)
         print(f"Total samples      : {len(df)}")
         print(f"Accuracy         : {acc * 100:.2f}%")
-        print(f"F1 Macro Score   : {f1_macro:.2f}")
+        print(f"F1 Macro Score   : {f1_macro:.5f}")
         print("="*50 + "\n")
     else:
         print("Please provide a message or evaluation file. Example: --evaluate sample_data/test.csv")
