@@ -1,7 +1,7 @@
 import yaml
 import pandas as pd
 from datasets import Dataset
-from unsloth import FastLanguageModel
+from unsloth import FastLanguageModel, is_bfloat16_supported
 from trl import SFTTrainer
 from transformers import TrainingArguments
 import os
@@ -59,8 +59,8 @@ def main():
             gradient_accumulation_steps=config['training']['gradient_accumulation_steps'],
             num_train_epochs=config['training']['epochs'],
             learning_rate=config['training']['learning_rate'],
-            fp16=not FastLanguageModel.is_bfloat16_supported(),
-            bf16=FastLanguageModel.is_bfloat16_supported(),
+            fp16=not is_bfloat16_supported(),
+            bf16=is_bfloat16_supported(),
             optim=config['training']['optimizer'],
             output_dir=config['training']['output_dir'],
             seed=3407, 
