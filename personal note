@@ -1,2 +1,4 @@
+Using 2 models to compare:
 unsloth/llama-3.2-1b-bnb-4bit 
 unsloth/gemma-2b-bnb-4bit
+(maybe) unsloth/llama-3-8b-bnb-4bit
