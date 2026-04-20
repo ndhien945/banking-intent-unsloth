@@ -16,7 +16,7 @@ def format_prompts(examples):
     for text, intent in zip(examples['text'], examples['intent_name']):
         full_text = PROMPT_TEMPLATE.format(text, intent) + " <|end_of_text|>"
         texts.append(full_text)
-    return {"text_formatted": texts}
+    return {"text": texts}
 
 
 def main():
@@ -46,13 +46,15 @@ def main():
     df_train = pd.read_csv(config['data']['train_path'])
     dataset = Dataset.from_pandas(df_train)
     dataset = dataset.map(format_prompts, batched=True)
+    
+    dataset = dataset.remove_columns(['label', 'intent_name'])
 
     print("5. Initializing SFT Trainer and starting training...")
     trainer = SFTTrainer(
         model=model,
         tokenizer=tokenizer,
         train_dataset=dataset,
-        dataset_text_field="text_formatted", 
+        dataset_text_field="text", 
         max_seq_length=config['model']['max_seq_length'],
         args=TrainingArguments(
             per_device_train_batch_size=config['training']['batch_size'],
