@@ -44,10 +44,10 @@ def main():
 
     print("4. Loading and formatting training data...")
     df_train = pd.read_csv(config['data']['train_path'])
-    dataset = Dataset.from_pandas(df_train)
+    dataset = Dataset.from_pandas(df_train, preserve_index=False)       
     dataset = dataset.map(format_prompts, batched=True)
     
-    dataset = dataset.remove_columns(['label', 'intent_name'])
+    dataset = dataset.select_columns(["text"])
 
     print("5. Initializing SFT Trainer and starting training...")
     trainer = SFTTrainer(
