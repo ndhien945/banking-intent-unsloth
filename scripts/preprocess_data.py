@@ -12,7 +12,8 @@ def main():
     args = parser.parse_args()
 
     print(f"1. Loading dataset...")
-    dataset = load_dataset("PolyAI/banking77", trust_remote_code=True)
+    # dataset = load_dataset("PolyAI/banking77", trust_remote_code=True)
+    dataset = load_dataset("banking77")
     
     df_train = pd.DataFrame(dataset['train'])
     df_test = pd.DataFrame(dataset['test'])
