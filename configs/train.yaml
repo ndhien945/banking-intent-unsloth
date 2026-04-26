@@ -1,6 +1,6 @@
 model:
-  base_model: "unsloth/gemma-2b-bnb-4bit"
-  max_seq_length: 512 
+  base_model: "unsloth/llama-3-8b-bnb-4bit"
+  max_seq_length: 256 
   load_in_4bit: true
 
 lora:
@@ -11,7 +11,7 @@ lora:
   target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
 training:
-  batch_size: 4 
+  batch_size: 2 
   gradient_accumulation_steps: 4 
   learning_rate: 0.0002 
   epochs: 1 

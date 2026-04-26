@@ -1,6 +1,6 @@
 model_path: "outputs/banking-intent-lora"
 
-max_seq_length: 512
+max_seq_length: 256
 load_in_4bit: true
 
 test_data_path: "sample_data/test.csv"
