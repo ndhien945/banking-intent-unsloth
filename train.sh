@@ -1,6 +1,4 @@
 #!/bin/bash
-
-# Dừng script ngay lập tức nếu có bất kỳ lệnh nào bị lỗi
 set -e
 
 export CUDA_VISIBLE_DEVICES=0
