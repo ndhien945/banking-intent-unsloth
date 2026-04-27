@@ -42,14 +42,14 @@ python scripts/train.py
 ```
 Mô hình sau khi huấn luyện sẽ được lưu tại đường dẫn đã cấu hình trong `configs/train.yaml`, ở đây là `outputs/banking-intent-lora`
 
-### Đánh giá mô hình
+### Kết quả thực hiện
 
-#### Đánh giá từng câu đơn lẻ
+#### Kết quả trên từng câu đơn lẻ
 ```bash
 python scripts/inference.py --message "Help! I just lost my wallet and my credit card is in it. What should I do?"
 ```
 
-#### Đánh giá trên toàn bộ tập test
+#### Kết quả trên toàn bộ tập test
 ```bash
 python scripts/inference.py --evaluate sample_data/test.csv
 ```
@@ -68,7 +68,7 @@ python scripts/inference.py --evaluate sample_data/test.csv
 | Max Sequence Length | 256 |
 | Target modules | "q_proj", "k_proj", "v_proj","o_proj", "gate_proj", "up_proj", "down_proj" |
 
-### 4. Kết quả thực hiện
+### 4. Kết quả đánh giá
 | Evaluation Metric | Value |
 |:------------------|:------|
 | Accuracy          | 87.92% |
