@@ -69,8 +69,10 @@ python scripts/inference.py --evaluate sample_data/test.csv
 | Target modules | "q_proj", "k_proj", "v_proj","o_proj", "gate_proj", "up_proj", "down_proj" |
 
 ### 4. Kết quả thực hiện
-Accuracy: 87.92 %
-F1 Score: 0.78904
+| Evaluation Metric | Value |
+|:------------------|:------|
+| Accuracy          | 87.92% |
+| F1 Score          | 0.78904 |
 
 ### 5. Link demo
 
