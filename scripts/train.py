@@ -89,7 +89,6 @@ def main():
     trainer.train()
 
     print("6. Validating...")
-    print("Evaluating on Validation Set (Accuracy & F1 Score)...")
     FastLanguageModel.for_inference(model)
     y_true = val_dataset['intent_name']
     y_pred = []
@@ -111,7 +110,6 @@ def main():
     
     print(f"-> Valid Accuracy : {acc * 100:.2f}%")
     print(f"-> Valid F1 Macro : {f1_macro:.5f}")
-    print("="*50 + "\n")
     
     print("7. Saving model...")
     
