@@ -76,5 +76,5 @@ python scripts/inference.py --evaluate sample_data/test.csv
 
 ### 5. Link demo
 
-- Demo video: [GDrive]()
+- Demo video: [GDrive](https://drive.google.com/file/d/1mu-asGyGbaXNR8uj2sLn0eiWSNRaEGG-/view?usp=sharing)
 
