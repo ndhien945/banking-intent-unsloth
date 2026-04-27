@@ -63,9 +63,6 @@ def main():
         f1_macro = f1_score(y_true, y_pred, average='macro')
         
         print("\n" + "="*50)
-        print(f"Results for {args.evaluate}")
-        print("="*50)
-        print(f"Total samples      : {len(df)}")
         print(f"Accuracy         : {acc * 100:.2f}%")
         print(f"F1 Macro Score   : {f1_macro:.5f}")
         print("="*50 + "\n")
