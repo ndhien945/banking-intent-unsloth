@@ -78,3 +78,7 @@ python scripts/inference.py --evaluate sample_data/test.csv
 
 - Demo video: [GDrive](https://drive.google.com/file/d/1mu-asGyGbaXNR8uj2sLn0eiWSNRaEGG-/view?usp=sharing)
 
+### 6. Link Kaggle cho phần Training và Inference
+
+- Kaggle Notebook: [Banking77](https://www.kaggle.com/code/danghiennguyen/banking77)
+
